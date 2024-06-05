@@ -3,18 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Embed with Fetch API</title>
+    <title>Embed with External Widget</title>
 </head>
 <body>
-    <div id="embed-container" style="width:100%; height:500px; border:1px solid #ccc; overflow:auto;"></div>
+    <!-- Example of a YouTube video embed -->
+    <div>
+        <iframe width="560" height="315" src="https://wediscussoclaros.discourse.group/" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
 
-    <script>
-        fetch('https://wediscussoclaros.discourse.group/')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('embed-container').innerHTML = data;
-            })
-            .catch(error => console.error('Error fetching content:', error));
-    </script>
+    <!-- Example of a custom widget script (if provided by the website) -->
+    <!--
+    <script src="https://wediscussoclaros.discourse.group/widget.js"></script>
+    -->
 </body>
 </html>
