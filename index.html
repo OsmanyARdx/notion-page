@@ -3,19 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fetch HTML Example</title>
+    <title>Fetch and Display HTML Example</title>
 </head>
 <body>
-    <button onclick="fetchHTML()">Fetch HTML</button>
+    <button onclick="fetchAndDisplayHTML()">Fetch and Display HTML</button>
+
+    <!-- This is where the fetched HTML content will be displayed -->
+    <div id="htmlContent"></div>
 
     <script>
-        function fetchHTML() {
-            fetch('https://wediscussoclaros.discourse.group/')
+        function fetchAndDisplayHTML() {
+            fetch('https://www.example.com/document.html')
                 .then(response => response.text()) // Read the response as text
-                .then(html => alert(html)) // Alert the retrieved HTML content
+                .then(html => {
+                    // Update the content of the htmlContent div with the fetched HTML
+                    document.getElementById('htmlContent').innerHTML = html;
+                })
                 .catch(error => console.error('Error fetching HTML:', error));
         }
     </script>
 </body>
 </html>
+
 
