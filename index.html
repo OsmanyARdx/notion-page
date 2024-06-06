@@ -1,49 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Iframe Source Changer</title>
-  <style>
-    body {
-      width: 100vw;
-      height: 100vh;
-      overflow: hidden;
-      margin: 0;
-      padding: 0;
-    }
-    section {
-      height: 100%;
-      width: 100%;
-      overflow-y: auto;
-    }
-  </style>
-  <script>
-    function changeSrc(src) {
-      var iframe = document.getElementById('site');
-      iframe.src = src;
-    }
-  </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Embed</title>
 </head>
 <body>
-  <form id="form" onchange="changeSrc(url.value);">
-    <fieldset>
-      <legend>Enter URL</legend>
-      <input id="url" type="text">
-      <input type="submit">
-    </fieldset>
-  </form>
-  <nav>
-    <a href="/" target="site">ROOT</a>&nbsp;&nbsp;
-    <a href="http://example.com" target="site">Example</a>&nbsp;&nbsp;
-    <a href="http://w3schools.com" target="site">W3Schools</a>&nbsp;&nbsp;
-    <a href="https://jsfiddle.net/user/dashboard/" target="site">jsFiddle</a>&nbsp;&nbsp;
-    <a href="https://www.jsdelivr.com" target="site">jsDelivr</a>&nbsp;&nbsp;
-    <a href="http://javascript.info" target="site">JavaScript Tut</a>&nbsp;&nbsp;
-    <a href="https://plainjs.com/" target="site">Plain JS</a>
-  </nav>
-  <section>
-    <iframe id="site" name="site" src="/" width="100%" height="100%" frameborder="0"></iframe>
-  </section>
+    <p><a href="https://wediscussoclaros.discourse.group/" target="myFrame">Open TutorialRepublic.com</a></p>
 </body>
 </html>
