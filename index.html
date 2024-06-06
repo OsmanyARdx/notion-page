@@ -3,10 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Embed</title>
+    <title>Fetch HTML Example</title>
 </head>
 <body>
-    <iframe src="/examples/html/hello.html" name="myFrame"></iframe>
-    <p><a href="https://wediscussoclaros.discourse.group/" target="myFrame">Open TutorialRepublic.com</a></p>
+    <button onclick="fetchHTML()">Fetch HTML</button>
+
+    <script>
+        function fetchHTML() {
+            fetch('https://wediscussoclaros.discourse.group/')
+                .then(response => response.text()) // Read the response as text
+                .then(html => alert(html)) // Alert the retrieved HTML content
+                .catch(error => console.error('Error fetching HTML:', error));
+        }
+    </script>
 </body>
 </html>
+
